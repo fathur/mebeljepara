@@ -1,2 +1,3 @@
-# mebeljepara
-Website e-Commerce untuk mebel Jepara
+# Mebel Jepara
+
+Website e-Commerce untuk Mebel Jepara berbasiskan OpenCart
