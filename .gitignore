@@ -10,3 +10,4 @@ image/cache/
 system/cache/
 system/logs/
 install-old/
+tmp/
