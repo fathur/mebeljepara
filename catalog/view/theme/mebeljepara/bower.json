@@ -9,7 +9,24 @@
   "private": true,
   "devDependencies": {
     "jquery": "~2.1.3",
-    "bootstrap": "~3.3.2",
     "fontawesome": "~4.3.0"
-  }
+  },
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  },
+  "homepage": "https://github.com/fathur/mebeljepara",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "jepara"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
