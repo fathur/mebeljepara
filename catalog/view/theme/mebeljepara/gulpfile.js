@@ -20,7 +20,13 @@ var gulp          = require('gulp'),
 
     files = {
       template: {
-        source: 'jade/*.jade',
+        watch: 'jade/**/*.jade',
+        source: [
+          'jade/*.jade',
+          '!jade/_config.jade',
+          '!jade/_header.jade',
+          '!jade/_footer.jade'
+        ],
         dest: '_public/'
       },
       less: {
@@ -75,7 +81,7 @@ gulp.task('build:js', function() {
 
 // Watch files
 gulp.task('watch', function() {
-  gulp.watch(files.template.source, function (file) {
+  gulp.watch(files.template.watch, function (file) {
     gulp.src(file.path).pipe(print(function (file) { return file + ' has modified.' }));
     gulp.start('build:template');
   });

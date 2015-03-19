@@ -1,0 +1,15 @@
+head
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+	title Mebel Jepara raya
+	link(rel="shortcut icon" href="" type="image/x-icon")
+
+	case env
+		when 'development'
+		when 'dev'
+			link(rel="stylesheet" href="css/style.css") 
+		when 'production'
+			link(rel="stylesheet" href="css/style.min.css") 
+		default
+			link(rel="stylesheet" href="css/style.css") 

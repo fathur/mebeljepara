@@ -1,18 +1,9 @@
-- var env = 'development'
+include _config.jade
+
 doctype html
 html.no-js(lang="en")
-	head
-		meta(charset="utf-8")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title Mebel Jepara raya
-		link(rel="shortcut icon" href="" type="image/x-icon")
-
-		case env
-			when 'development'
-				link(rel="stylesheet" href="css/style.css") 
-			when 'production'
-				link(rel="stylesheet" href="css/style.min.css") 
+	
+	include _header.jade
 
 	body
 		// Header section
@@ -32,8 +23,4 @@ html.no-js(lang="en")
 						img.img-responsive
 				.navbar-collapse.collapse#navbar
 
-		// Footer section
-		footer.fluid-container
-			.container
-				.row
-					.col-sm-12
+		include _footer.jade
