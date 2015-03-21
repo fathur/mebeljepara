@@ -1,0 +1,40 @@
+mixin products(count)
+	.row
+		- for (var i=0; i < count; i++)
+			div(class="col-sm-#{12/count}").product-list--item
+				.triangle-badge
+					span.triangle-badge--text Hot
+				.row
+					a(href="#") 
+						img.img-responsive(src='img/product.jpg')
+				.row.product-list--item--desc
+					.col-sm-8
+						.row.title
+							a(href="#") Breach Snowboard Jacket
+					.col-sm-4.text-right
+						.row.price
+							span $991.35
+
+mixin product_filter()
+	.row.product-filter
+		.col-sm-12
+			.row
+				.col-sm-2
+					.row.product-filter--item
+						p a
+				.col-sm-4
+					.row.product-filter--item
+						span Sort by
+						select.form-control
+							each item in ['price: low to high', 'price: high to low', 'rating', 'popular']
+								option= item
+				.col-sm-3
+					.row.text-right.product-filter--item
+						span Show
+						select.form-control
+							each item in [6, 9, 12, 15, 18, 21]
+								option= item
+						span per page
+				.col-sm-3
+					.row.product-filter--item
+						p a

@@ -4546,7 +4546,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #f5f5f5;
   border-radius: 4px;
 }
 .breadcrumb > li {
@@ -6496,4 +6495,102 @@ button.close {
 }
 .df {
   color: yellow;
+}
+.footer {
+  background-color: #e74c3c;
+  color: white;
+}
+.footer--item {
+  padding: 20px 25px;
+}
+.footer--item h3 {
+  margin: 0 0 15px 0;
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+.footer--item a {
+  color: white;
+  text-decoration: none;
+}
+.copyright {
+  margin-bottom: 20px;
+}
+.copyright .row {
+  padding: 10px 25px;
+  background-color: #c0392b;
+  color: white;
+}
+body {
+  background-color: #ecf0f1;
+}
+.breadcrumb h1 {
+  font-weight: bold;
+  font-style: italic;
+}
+.product-list {
+  margin-bottom: 20px;
+}
+.product-list--title {
+  background-color: #FFF;
+  padding: 25px;
+}
+.product-list--title h3 {
+  margin: 0;
+  font-style: italic;
+  font-weight: bold;
+}
+.product-list--item a {
+  color: #555555;
+  text-decoration: none;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+.product-list--item a:hover {
+  color: #c0392b;
+}
+.product-list--item:not(:last-child) {
+  border-right: 1px solid #bdc3c7;
+}
+.product-list--item--desc {
+  background-color: #FFF;
+  padding: 10px 25px;
+}
+.product-list--item--desc .price {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: large;
+  font-style: italic;
+}
+.product-list--item .triangle-badge {
+  position: absolute;
+  left: -1px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  text-transform: uppercase;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #007bff transparent transparent transparent;
+  line-height: 0px;
+  _border-color: #007bff #000000 #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+.product-list--item .triangle-badge--text {
+  position: absolute;
+  top: -35px;
+  left: 5px;
+}
+.product-filter {
+  background-color: white;
+}
+.product-filter--item {
+  padding: 10px 25px;
+}
+.search-filter {
+  background-color: white;
+  padding: 25px;
 }

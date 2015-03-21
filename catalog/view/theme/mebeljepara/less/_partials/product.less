@@ -1,0 +1,72 @@
+.product-list {	
+	margin-bottom: 20px;
+	&--title {
+		background-color: #FFF;
+		padding: 25px;
+		h3 {
+			margin: 0;
+			font-style: italic;
+			font-weight: bold;
+		}
+	}
+	&--item {
+		//height: 235px;
+		a {
+			color: @light-black;
+			text-decoration: none;
+			transition: 1s;
+			&:hover {
+				color: @pomegranate;
+			}
+		}
+		&:not(:last-child) {
+			border-right: 1px solid @silver;
+		}
+		&--desc {
+			background-color: #FFF;
+			padding: 10px 25px;
+			.title {
+			}
+			.price {
+				color: @alizarin;
+				font-weight: bold;
+				font-size: large;
+				font-style: italic;
+			}
+		}
+		.triangle-badge {
+			position: absolute;
+  			left: -1px;
+  			color: white;
+  			font-weight: bold;
+  			font-size: 12px;
+  			font-style: italic;
+  			text-transform: uppercase;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 50px 50px 0 0;
+			border-color: #007bff transparent transparent transparent;
+			line-height: 0px;
+			_border-color: #007bff #000000 #000000 #000000;
+			_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+
+			&--text {
+				  position: absolute;
+				  top: -35px;
+				  left: 5px;
+			}
+		}
+	}
+}
+.product-filter {
+	background-color: white;
+
+	&--item {
+		padding: 10px 25px;
+	}
+}
+.search-filter {
+	background-color: white;
+	padding: 25px;
+}

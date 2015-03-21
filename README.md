@@ -7,11 +7,11 @@ Website e-Commerce untuk Mebel Jepara berbasiskan OpenCart
 Color: carot and pumpkin
 
 Home:
-- home 3 ---->
-- home 1 with shadow color ---->
+- 01_home 3 ---->
+- 01_home 1 with shadow color ---->
 
 Menu:
-- menu 1
+- 03_menu 1
 
 Account:
 
@@ -42,8 +42,8 @@ Information\Information:
 - 08_article_experts_page
 
 Checkout/Cart:
-- shopping_cart_1
-- shopping_cart_4_1
+- 09_shopping_cart_1
+- 09_shopping_cart_4_1
 
 Checkout\Checkout:
 - 12_checkout

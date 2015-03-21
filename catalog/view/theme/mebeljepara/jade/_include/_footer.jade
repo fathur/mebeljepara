@@ -1,0 +1,45 @@
+// Footer section
+footer.container
+	.row.footer
+		.col-sm-3
+			.row.footer--item
+				h3 Category
+				ul.list-unstyled
+					li: a(href="#") Men
+					li: a(href="#") Women
+					li: a(href="#") Men
+					li: a(href="#") Women
+		.col-sm-3
+			.row.footer--item
+				h3 Category
+				ul.list-unstyled
+					li: a(href="#") Men
+					li: a(href="#") Women
+					li: a(href="#") Men
+					li: a(href="#") Women
+		.col-sm-3
+			.row.footer--item
+				h3 Category
+				ul.list-unstyled
+					li: a(href="#") Men
+					li: a(href="#") Women
+					li: a(href="#") Men
+					li: a(href="#") Women
+		.col-sm-3
+			.row.footer--item
+				h3 Newsletter
+				p Join thusand of poeple who subscribe to uor Newsletter
+	.row.copyright
+		.col-sm-12
+			.row
+				span @copyright 2015
+			
+
+case env
+	when 'development'
+	when 'dev'
+		script(src="js/core.js")
+	when 'production'
+		script(src="js/core.min.js")
+	default
+		script(src="js/core.js")

@@ -7,6 +7,9 @@ var gulp          = require('gulp'),
     print         = require('gulp-print'),
     rename        = require('gulp-rename'),
     uglify        = require('gulp-uglify'),  
+    /*browserSync   = require('browser-sync'),
+    reload        = browserSync.reload,*/
+    //livereload    = require('gulp-livereload'),
 
     setPrefix = [
       'last 2 version',
@@ -23,9 +26,7 @@ var gulp          = require('gulp'),
         watch: 'jade/**/*.jade',
         source: [
           'jade/*.jade',
-          '!jade/_config.jade',
-          '!jade/_header.jade',
-          '!jade/_footer.jade'
+          '!jade/_include/**/*.jade'
         ],
         dest: '_public/'
       },
@@ -46,12 +47,25 @@ var gulp          = require('gulp'),
     }
 ;
 
+gulp.task('serve', function() {
+
+ /* browserSync({
+      server: {
+          baseDir: "./_public/"
+      }
+  });*/
+});
+
 // Build
 gulp.task('build:template', function() {
   gulp.src(files.template.source)
     .pipe(jade({ pretty: true }))
     .pipe(gulp.dest(files.template.dest))
-    .pipe(print(function (file) { return file + ' has successfully created.' }));
+    .pipe(print(function (file) { return file + ' has successfully created.' }))
+    //.pipe(browserSync.reload({stream: true}))
+    //.pipe(livereload())
+    ;
+
 
 });
 
@@ -64,7 +78,13 @@ gulp.task('build:less', function() {
     .pipe(rename('style.min.css'))
     .pipe(minifyCSS())
     .pipe(gulp.dest(files.less.dest))
-    .pipe(print(function (file) { return file + ' has successfully created.' }));
+    .pipe(print(function (file) { return file + ' has successfully created.' }))
+    //.pipe(browserSync.reload())
+    //.pipe(livereload())
+    
+    ;
+
+
 });
 
 gulp.task('build:js', function() {
@@ -75,25 +95,34 @@ gulp.task('build:js', function() {
     .pipe(uglify())
     .pipe(rename('core.min.js'))
     .pipe(gulp.dest(files.js.dest))
-    .pipe(print(function (file) { return file + ' has successfully created.' }));
+    .pipe(print(function (file) { return file + ' has successfully created.' }))
+    //.pipe(reload({stream: true}))
+    //.pipe(livereload())
+    
+    ;
 
 });
 
+
+
 // Watch files
 gulp.task('watch', function() {
-  gulp.watch(files.template.watch, function (file) {
+
+  /*livereload.listen({
+    port: 1234,
+    basePath: './_public'
+  });*/
+  
+  gulp.watch(files.template.watch, ['build:template'], function (file) {
     gulp.src(file.path).pipe(print(function (file) { return file + ' has modified.' }));
-    gulp.start('build:template');
   });
 
-  gulp.watch(files.less.watch, function (file) {
+  gulp.watch(files.less.watch, ['build:less'], function (file) {
     gulp.src(file.path).pipe(print(function (file) { return file + ' has modified.' }));
-    gulp.start('build:less');
   });
 
-  gulp.watch(files.js.watch, function (file) {
+  gulp.watch(files.js.watch, ['build:js'], function (file) {
     gulp.src(file.path).pipe(print(function (file) { return file + ' has modified.' }));
-    gulp.start('build:js');
   });
 });
 
