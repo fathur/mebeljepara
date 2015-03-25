@@ -102,7 +102,7 @@ class MebelImportCommand extends Command {
 					'sort_order'		=> $worksheet->getCellByColumnAndRow(38-1, $row)
 				);
 	
-				$this->insert($data);
+				$this->insert($data, $worksheetTitle);
 			}
 		}
 	}
@@ -133,8 +133,60 @@ class MebelImportCommand extends Command {
 		);
 	}
 
-	protected function insert(array $data)
+	protected function insert(array $data, $worksheetTitle)
 	{
+		switch ($worksheetTitle) {
+			case 'kursi-tamu':
+				$categoryId = 59;
+				break;
+			case 'tempat-tidur':
+				$categoryId = 59;
+				break;
+			case 'lemari':
+				$categoryId = 59;
+				break;
+			case 'kursi-makan':
+				$categoryId = 59;
+				break;
+			case 'tolet':
+				$categoryId = 59;
+				break;
+			case 'kursi-sofa':
+				$categoryId = 59;
+				break;
+			case 'meje-telpon':
+				$categoryId = 59;
+				break;
+			case 'bufet':
+				$categoryId = 59;
+				break;
+			case 'meja':
+				$categoryId = 59;
+				break;
+			case 'kursi':
+				$categoryId = 59;
+				break;
+			case 'sketsel':
+				$categoryId = 59;
+				break;
+			case 'jam-hias':
+				$categoryId = 59;
+				break;
+			case 'mimbar':
+				$categoryId = 59;
+				break;
+			case 'nakas':
+				$categoryId = 59;
+				break;
+			case 'gebyok':
+				$categoryId = 59;
+				break;
+			case 'kaligrafi':
+				$categoryId = 59;
+				break;
+			
+		}
+
 		$product = new Product;
 		$product->model 			= $data['model'];
 		$product->sku 				= $data['sku'];
