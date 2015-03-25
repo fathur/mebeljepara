@@ -12,3 +12,5 @@ system/logs/
 install-old/
 tmp/
 tema/
+image/catalog/
+private/storage/
