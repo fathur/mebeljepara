@@ -9,22 +9,96 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container-fluid">
+    <nav class="navbar navbar-brown navbar-fixed-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2 text-center">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Mebel Jepara</a>
+            </div>
+          </div>
+          <div class="col-sm-10">
+            <div class="row menu">
+              <div id="navbar" class="navbar-collapse collapse"> 
+                <ul class="nav navbar-nav">
+                  <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Kursi <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                      <li><a href="#">Kursi Tamu</a></li>
+                      <li><a href="#">Kursi Makan</a></li>
+                      <li><a href="#">Kursi Sofa</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Meja <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                      <li><a href="#">Meja Rias / Tolet</a></li>
+                      <li><a href="#">Meje Telephone</a></li>
+                      <li><a href="#">Meja Nakas</a></li>
+                      <li><a href="#">Mimbar</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Almari</a></li>
+                  <li><a href="#">Tempat Tidur</a></li>
+                  <li><a href="#">Jam Hias</a></li>
+                  <li><a href="#">Gebyok</a></li>
+                  <li><a href="#">Sketsel</a></li>
+                  <li><a href="#">Kaligrafi</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row tool">
+              <div class="col-sm-8">
+                <div class="row">
+                  <div class="input-group input-group-sm">
+                    <div class="input-group-btn">
+                      <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn btn-default dropdown-toggle">Category &nbsp;<span class="caret"></span></button>
+                      <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Something</a></li>
+                      </ul>
+                    </div>
+                    <input type="text" class="form-control">
+                    <!-- span.form-control-feedback 78 results-->
+                    <div class="input-group-btn">
+                      <button class="btn btn-default"> <span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                      <button class="btn btn-default"> <span aria-hidden="true" class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pull-right"><a data-toggle="modal" data-target="#loginModal" type="button" class="tool--login">Login</a><a class="tool--wish-list">Wish List (0)</a><span>chart</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Modal dialog box-->
+    <div id="loginModal" tab-index="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <h4 id="loginModalLabel" class="modal-title"><?php echo "Modal" ?></h4>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">...</div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid home-slider">
       <div class="row">
         <div id="slider" data-ride="carousel" class="carousel slide">
           <ol class="carousel-indicators">
-            <li data-target="slider" data-slide-to="0" class="active"></li>
-            <li data-target="slider" data-slide-to="1"></li>
-            <li data-target="slider" data-slide-to="2"></li>
+            <li data-target="#slider" data-slide-to="0" class="active"></li>
+            <li data-target="#slider" data-slide-to="1"></li>
+            <li data-target="#slider" data-slide-to="2"></li>
           </ol>
           <div role="listbox" class="carousel-inner">
-            <div class="item active"><img src="..." alt="...">
+            <div class="item active"><img src="img/product.jpg" alt="Product">
               <div class="carousel-caption">...</div>
             </div>
-            <div class="item"><img src="..." alt="...">
+            <div class="item"><img src="img/product.jpg" alt="Product">
               <div class="carousel-caption">...</div>
             </div>
-            <div class="item"><img src="..." alt="...">
+            <div class="item"><img src="img/product.jpg" alt="Product">
               <div class="carousel-caption">...</div>
             </div>
           </div><a href="#slider" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only"></span></a><a href="#slider" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only"></span></a>

@@ -47,15 +47,6 @@ var gulp          = require('gulp'),
     }
 ;
 
-gulp.task('serve', function() {
-
- /* browserSync({
-      server: {
-          baseDir: "./_public/"
-      }
-  });*/
-});
-
 // Build
 gulp.task('build:template', function() {
   gulp.src(files.template.source)
@@ -65,8 +56,6 @@ gulp.task('build:template', function() {
     //.pipe(browserSync.reload({stream: true}))
     //.pipe(livereload())
     ;
-
-
 });
 
 gulp.task('build:less', function() {
@@ -81,10 +70,7 @@ gulp.task('build:less', function() {
     .pipe(print(function (file) { return file + ' has successfully created.' }))
     //.pipe(browserSync.reload())
     //.pipe(livereload())
-    
     ;
-
-
 });
 
 gulp.task('build:js', function() {
@@ -98,20 +84,11 @@ gulp.task('build:js', function() {
     .pipe(print(function (file) { return file + ' has successfully created.' }))
     //.pipe(reload({stream: true}))
     //.pipe(livereload())
-    
     ;
-
 });
-
-
 
 // Watch files
 gulp.task('watch', function() {
-
-  /*livereload.listen({
-    port: 1234,
-    basePath: './_public'
-  });*/
   
   gulp.watch(files.template.watch, ['build:template'], function (file) {
     gulp.src(file.path).pipe(print(function (file) { return file + ' has modified.' }));

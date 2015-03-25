@@ -5,25 +5,25 @@ doctype html
 html.no-js(lang="en")
 	include _include/_header.jade
 	body
-		//- include _include/_navigation.jade
+		include _include/_navigation.jade
 
 		//- Kode content mulai dari sini
-		.container-fluid
+		.container-fluid.home-slider
 			.row
 				.carousel.slide#slider(data-ride="carousel")
 					ol.carousel-indicators
-						li.active(data-target="slider", data-slide-to="0")
-						li(data-target="slider", data-slide-to="1")
-						li(data-target="slider", data-slide-to="2")
+						li.active(data-target="#slider", data-slide-to="0")
+						li(data-target="#slider", data-slide-to="1")
+						li(data-target="#slider", data-slide-to="2")
 					.carousel-inner(role="listbox")
 						.item.active
-							img(src="...", alt="...")
+							img(src="img/product.jpg", alt="Product")
 							.carousel-caption ...
 						.item
-							img(src="...", alt="...")
+							img(src="img/product.jpg", alt="Product")
 							.carousel-caption ...
 						.item
-							img(src="...", alt="...")
+							img(src="img/product.jpg", alt="Product")
 							.carousel-caption ...
 					a.left.carousel-control(href="#slider", role="button", data-slide="prev")
 						span.glyphicon.glyphicon-chevron-left(aria-hidden="true")

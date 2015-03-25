@@ -1,16 +1,89 @@
-// Header section
-nav.navbar.navbar-fixed-top(role="navigation")
+nav.navbar.navbar-brown.navbar-fixed-top
 	.container
-		.navbar-header
-			button.navbar-toggle.collapsed(type="button" 
-				data-toggle="collapse" 
-				data-target="#navbar")
+		.row
+			.col-sm-2.text-center
+				.navbar-header
+					button.navbar-toggle.collapsed(
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbar"
+						aria-expanded="false"
+						aria-controls="navbar")
+						span.sr-only Toggle navigation 
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
 
-				span.sr-only Toggle navigation
+					a.navbar-brand(href="#") Mebel Jepara
+			.col-sm-10
+				.row.menu
+					.navbar-collapse.collapse#navbar 
+						ul.nav.navbar-nav
+							li.dropdown
+								a.dropdown-toggle(
+									href="#"
+									data-toggle="dropdown"
+									role="button"
+									aria-expanded="false") Kursi 
+									span.caret
+								ul.dropdown-menu(role="menu")
+									each kursi in ['Kursi Tamu','Kursi Makan', 'Kursi Sofa']
+										li: a(href="#")= kursi
+							li.dropdown
+								a.dropdown-toggle(
+									href="#"
+									data-toggle="dropdown"
+									role="button"
+									aria-expanded="false") Meja 
+									span.caret
+								ul.dropdown-menu(role="menu")
+									each meja in ['Meja Rias / Tolet','Meje Telephone', 'Meja Nakas','Mimbar']
+										li: a(href="#")= meja
+									
+							each product in ['Almari','Tempat Tidur','Jam Hias','Gebyok','Sketsel','Kaligrafi']
+								li
+									a(href="#")= product
+				.row.tool
+					.col-sm-8
+						.row
+							.input-group.input-group-sm
+								.input-group-btn
+									button.btn.btn-default.dropdown-toggle(
+										type="button"
+										data-toggle="dropdown"
+										aria-expanded="false") Category &nbsp;
+										span.caret
+									ul.dropdown-menu(role="menu")
+										li: a(href="#") Something
+								input.form-control(type="text")
+								// span.form-control-feedback 78 results
 
-				each val in [1, 2, 3]
-					span.icon-bar
-					
-			a.navbar-brand(href="#")
-				img.img-responsive
-		.navbar-collapse.collapse#navbar
+								.input-group-btn
+									button.btn.btn-default 
+										span.glyphicon.glyphicon-remove(aria-hidden="true")
+									button.btn.btn-default 
+										span.glyphicon.glyphicon-search(aria-hidden="true")
+					.pull-right
+						a.tool--login(data-toggle="modal"
+							data-target="#loginModal"
+							type="button") Login
+						a.tool--wish-list Wish List (0)
+						span chart
+
+// Modal dialog box
+.modal.fade#loginModal(tab-index="-1"
+	role="dialog"
+	aria-labelledby="loginModalLabel"
+	aria-hidden="true")
+	.modal-dialog
+		.modal-content
+			.modal-header
+				button.close(type="button"
+					data-dismiss="modal"
+					aria-label="Close")
+					span(aria-hidden="true") &times;
+				h4.modal-title#loginModalLabel <?php echo "Modal" ?>
+			.modal-body ...
+			.modal-footer ...
+
+				

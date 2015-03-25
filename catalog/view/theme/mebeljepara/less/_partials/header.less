@@ -1,3 +1,186 @@
-.df {
-	color: yellow;
+
+// Default navbar
+.navbar-brown {
+  /*background-color: @navbar-brown-bg;
+  border-color: @navbar-brown-border;*/
+  margin-top: 15px;
+
+  & > .container {
+  	background-color: @pomegranate;
+  	a {
+  		color: @navbar-brown-color;
+  	}
+  }
+
+  .navbar-brand {
+  	display: block;
+  	width: 100%;
+    color: @navbar-brown-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-brown-color;
+      background-color: @navbar-brown-brand-hover-bg;
+    }
+  }
+
+  @media (min-width: 768px) {
+  	.navbar-brand {
+  		margin-left: 0px !important;
+  	}
+  }
+
+  .navbar-text {
+    color: @navbar-brown-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-brown-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-brown-link-hover-color;
+        background-color: @navbar-brown-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-brown-link-active-color;
+        background-color: @navbar-brown-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-brown-link-disabled-color;
+        background-color: @navbar-brown-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-header {
+  	width: 100%;
+  }
+
+  .navbar-toggle {
+    border-color: @navbar-brown-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-brown-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-brown-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: @navbar-brown-border;
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-brown-link-active-bg;
+        color: @navbar-brown-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: @navbar-brown-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-brown-link-hover-color;
+            background-color: @navbar-brown-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-brown-link-active-color;
+            background-color: @navbar-brown-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-brown-link-disabled-color;
+            background-color: @navbar-brown-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Links in navbars
+  //
+  // Add a class to ensure links outside the navbar nav are colored correctly.
+
+  .navbar-link {
+    color: @navbar-brown-link-color;
+    &:hover {
+      color: @navbar-brown-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: @navbar-brown-link-color;
+    &:hover,
+    &:focus {
+      color: @navbar-brown-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: @navbar-brown-link-disabled-color;
+      }
+    }
+  }
+
+  .menu,
+  .tool {
+  	background-color: #FFF;
+  	a {
+  		color: @light-black;
+  	}
+
+  	&--login,
+  	&--wish-list {
+  		text-decoration: none;
+  		cursor: pointer;
+  		display: inline-block;
+  		padding: 5px 10px;
+  	}
+  }
+
+  .menu {
+  	border-bottom: 1px solid @clouds;
+  }
+
+  .tool {
+  	padding: 10px 15px;
+  }
+}
+
+.home-slider {
+	margin-bottom: -76px;
+}
+.carousel-inner {
+	& > .item {
+		height: 577px;
+	}
 }
